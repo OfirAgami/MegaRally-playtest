@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#132724" />
+    <title>Junction Valley · RetroRally</title>
+    <script type="module" crossorigin src="/MegaRally-playtest/assets/roads-Dm3CIzSl.js"></script>
+    <link rel="modulepreload" crossorigin href="/MegaRally-playtest/assets/handling-D44L2FrH.js">
+    <link rel="modulepreload" crossorigin href="/MegaRally-playtest/assets/track-Dqw3AEh9.js">
+    <link rel="modulepreload" crossorigin href="/MegaRally-playtest/assets/car-model-OsOlhgpm.js">
+    <link rel="modulepreload" crossorigin href="/MegaRally-playtest/assets/pickups-B-zdoF45.js">
+    <link rel="stylesheet" crossorigin href="/MegaRally-playtest/assets/roads-Bi0z5fZm.css">
+  </head>
+  <body>
+    <main id="prototype">
+      <div id="world" aria-label="Junction Valley driving view"></div>
+      <header class="masthead"><a href="./">RETRO RALLY</a><span>ROAD PROTOTYPE <i>01</i></span></header>
+      <section class="route-panel" aria-label="Race routes">
+        <p class="eyebrow">ONE MAP / TWO ROUTES</p>
+        <h1>Junction Valley<span>Choose your way through.</span></h1>
+        <div class="route-options">
+          <button class="route-choice" data-route="0" aria-pressed="true"><span class="route-number">01</span><span><strong>Lake Run</strong><small id="length-0"></small></span><span class="route-arrow">↗</span></button>
+          <button class="route-choice" data-route="1" aria-pressed="false"><span class="route-number">02</span><span><strong>Cross Valley</strong><small id="length-1"></small></span><span class="route-arrow">↗</span></button>
+        </div>
+        <p id="route-description"></p>
+        <div class="map-wrap"><svg id="map" viewBox="-235 -370 500 600" role="img" aria-label="Road network and selected race route"></svg><span class="map-north">N ↑</span></div>
+        <p class="map-key"><span>Selected route</span><span>Open road</span></p>
+      </section>
+      <div class="toolbar"><button id="camera" type="button" aria-pressed="false">Map view <kbd>M</kbd></button><button id="restart" type="button">Restart <kbd>R</kbd></button></div>
+      <section class="race-hud" aria-label="Race status"><div><span>TIME</span><strong id="time">00:00.00</strong></div><div><span>GATES</span><strong id="gates">0 / 0</strong></div><div><span>KM/H</span><strong id="speed">0</strong></div></section>
+      <div class="drive-prompt" role="status"><strong id="status">Loading car…</strong><span id="hint">Follow the highlighted route through the junctions.</span></div>
+      <footer><span>W / ↑ &nbsp; DRIVE &nbsp;·&nbsp; A D / ← → &nbsp; STEER</span><span>All roads open. Follow the gates in order.</span></footer>
+      <div class="touch-controls" aria-label="Driving controls"><div><button data-control="left" aria-label="Steer left">←</button><button data-control="right" aria-label="Steer right">→</button></div><button data-control="drive" aria-label="Accelerate">DRIVE ↑</button></div>
+    </main>
+  </body>
+</html>
