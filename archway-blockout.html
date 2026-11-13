@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#183c46" />
+  <title>Archway Coast · Driving blockout</title>
+  <script type="module" crossorigin src="/MegaRally-playtest/assets/archwayBlockout-CEfLoXfb.js"></script>
+  <link rel="modulepreload" crossorigin href="/MegaRally-playtest/assets/handling-D776gAdO.js">
+  <link rel="modulepreload" crossorigin href="/MegaRally-playtest/assets/track-Ba-CnJhO.js">
+  <link rel="modulepreload" crossorigin href="/MegaRally-playtest/assets/car-model-CDlR3XFf.js">
+  <link rel="modulepreload" crossorigin href="/MegaRally-playtest/assets/track-boundary-63RLgsCp.js">
+  <link rel="modulepreload" crossorigin href="/MegaRally-playtest/assets/scene-GH7kh9Nl.js">
+  <link rel="stylesheet" crossorigin href="/MegaRally-playtest/assets/archwayBlockout-TeI7P2BY.css">
+</head>
+<body>
+  <main id="blockout">
+    <header><div><strong>ARCHWAY COAST</strong><small>Driving blockout</small></div><nav><button id="reset" aria-label="Return to garage">Garage</button><button id="map-toggle" aria-expanded="false" aria-controls="map-panel">Map</button><button id="photo-toggle" aria-pressed="false" aria-controls="photo-panel">Photo</button></nav></header>
+    <div id="world" aria-label="Archway Coast driving view"></div>
+    <div id="location" role="status">Loading coast…</div>
+    <div id="speed">0 km/h</div>
+    <button id="tree-toggle" aria-pressed="true" title="Compare olive trees and shrubs across the map">Trees &amp; shrubs: Billboards</button>
+    <section id="photo-panel" hidden aria-label="Photo mode controls">
+      <strong>Free camera</strong>
+      <p>Drag to look · W A S D to move · Q / E down / up<br>Shift: fast · Alt: slow · Scroll: zoom · P / Esc: drive</p>
+      <output id="photo-coordinates"></output>
+      <label class="photo-zoom">Field of view <input id="photo-fov" type="range" min="20" max="100" value="60"></label>
+      <div class="photo-actions"><button id="photo-save">Save photo</button><button id="photo-copy">Copy view link</button></div>
+      <input id="photo-link" type="text" readonly hidden aria-label="Camera view link">
+      <p id="photo-status" role="status"></p>
+      <div id="photo-move" aria-label="Move free camera">
+        <button data-move="KeyW" aria-label="Fly forward">Forward</button><button data-move="KeyS" aria-label="Fly backward">Back</button>
+        <button data-move="KeyA" aria-label="Fly left">Left</button><button data-move="KeyD" aria-label="Fly right">Right</button>
+        <button data-move="KeyQ" aria-label="Fly down">Down</button><button data-move="KeyE" aria-label="Fly up">Up</button>
+      </div>
+    </section>
+    <section id="map-panel" hidden aria-label="Archway Coast map">
+      <svg id="map" role="img" aria-label="Archway Bay, olive grove, ridge, cove and fort with thirteen locations"></svg>
+      <p>G · Garage &nbsp; S1–S4 · Shops &nbsp; R1–R8 · Racers</p>
+      <p>Shops and racers mark locations for this driving test.</p>
+    </section>
+    <footer><span>Hold DRIVE · slide to steer · release to coast<br>Keyboard: W / ↑ + A D / ← →</span></footer>
+  </main>
+</body>
+</html>
